@@ -1,0 +1,31 @@
+{
+        // tsconfig.json是ts编译器的配置文件，用来配置编译时的行为，比如编译结果的输出位置等。
+        // include: 指定要编译的文件，可以使用通配符，比如"src/*"表示src目录下的所有文件，"src/**/*" //表示src目录及其子目录下的所有文件。
+        // 路径：**/ 表示任意目录，* 表示任意文件名，? 表示任意单个字符。
+        // exclude: 指定不编译的文件，也可以使用通配符。
+        // compilerOptions: 指定编译时的行为，比如编译结果的输出位置，是否生成sourceMap等。
+        // target: 指定编译后的代码的版本，比如"es5"表示编译后的代码是ES5版本的，"es6"表示编译后的代码是ES6版本的。
+        // extends: 指定继承的配置文件，比如"extends": "./tsconfig.base.json"表示继承当前目录下的tsconfig.base.json文件。
+
+    "include": ["src/*"], // 指定要编译的文件
+
+    "compilerOptions": {
+        "target":"ES2022" ,        // 编译后的代码是ES5版本的
+        "module": "ES6",   // 指定生成哪个模块系统代码(使用哪个模块化规范)
+        "outDir": "./dist",    // 指定编译后的代码的输出位置
+        //"outFile": "./dist/bundle.js",  // 指定编译后的代码的输出文件名(将所有的ts文件编译成一个js文件)
+        "strict": true,    // 开启所有严格类型检查选项
+        "esModuleInterop": true, // 允许导入使用ES模块语法的模块 
+        //"lib": ["ES2022", "DOM"], // 指定要包含在编译中的库文件(一般情况下不需要指定)
+        "allowJs": false, // 是否允许编译javascript文件，默认为false（不编译）
+        "checkJs": false, // 是否检查javascript文件中的类型错误，默认为false（不检查）
+        "removeComments": false, // 是否移除注释，默认为false（不移除）
+        "noEmit": false, // 是否生成编译后的文件，默认为false（生成）
+        "noEmitOnError": false, // 是否在编译出错时不生成编译后的文件，默认为false（出错也生成）
+        "alwaysStrict": false, // 是否在编译后的文件中包含"use strict"，默认为false（不包含）
+        "noImplicitAny": false, // 是否允许隐式的any类型，默认为false（不允许）
+        "noImplicitThis": false, // 是否允许隐式的this类型，默认为false（不允许）
+        "strictNullChecks": false, // 是否启用严格的null检查，默认为false（不启用）
+        
+    },
+} 
