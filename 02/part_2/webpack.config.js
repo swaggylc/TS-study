@@ -93,10 +93,7 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HTMLWebpackPlugin({
-      // title: "自定义title"
-      // title: "TypeScript学习",
-      // 生成网页模板
-      // template: "./src/index.html"
+      template: "./src/index.html",
     }),
   ],
   // 用来设置引用模块
