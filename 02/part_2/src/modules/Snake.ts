@@ -36,3 +36,5 @@ class Snake {
     this.head.insertAdjacentHTML("beforeend", "<div></div>");
   }
 }
+
+export default Snake;
